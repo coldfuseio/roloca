@@ -15,3 +15,7 @@ func checkErr(err error) {
         panic(err)
     }
 }
+
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Roloca! \n /judete - list all counties in Romania \n /orase - list all cities in Romania \n /orase/<county-code> - list all cities in a county (e.g. /orase/GL - all cities in Galati county)"))
+}

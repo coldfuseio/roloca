@@ -13,6 +13,12 @@ type Routes []Route
 
 var routes = Routes{
 	Route{
+		"Home",
+		"Get",
+		"/",
+		HomeHandler,
+	},
+	Route{
 		"CountiesAll",
 		"GET",
 		"/judete",
