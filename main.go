@@ -3,6 +3,8 @@ package main // import "github.com/nalexeric/roloca"
 import (
 	"log"
 	"net/http"
+	"fmt"
+	"github.com/yosssi/gohtml"
 )
 
 func main() {
@@ -17,5 +19,19 @@ func checkErr(err error) {
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Roloca! \n /judete - list all counties in Romania \n /orase - list all cities in Romania \n /orase/<county-code> - list all cities in a county (e.g. /orase/GL - all cities in Galati county)"))
+	h := `
+	<!DOCTYPE html><html>
+	<head>
+		<title>Roloca</title>
+	</head>
+	<body>
+		Roloca! <br>
+		<a href='/judete'>/judete</a> - list all counties in Romania <br>
+		<a href='/orase'>/orase</a> - list all cities in Romania <br>
+		/orase/:countyCode - list all cities in a county (e.g. <a href='/orase/GL'>/orase/GL</a> - all cities in Galati county)
+		<br><br>
+		developed by <a href='http://coldfuse.io'>coldfuse.io</a>,<br>using data from <a href='https://github.com/romania/localitati'>github.com/romania/localitati</a>
+	</body>
+	`
+	fmt.Fprintf(w, gohtml.Format(h))
 }
