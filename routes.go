@@ -19,6 +19,13 @@ var routes = Routes{
 		HomeHandler,
 	},
 	Route{
+		"HomeRo",
+		"Get",
+		"/ro",
+		HomeRoHandler,
+	},
+
+	Route{
 		"CountiesAll",
 		"GET",
 		"/judete",
