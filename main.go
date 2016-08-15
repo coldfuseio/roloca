@@ -45,7 +45,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
     <![endif]-->
 
             <header class="header">
-                <img src="http://coldfuse.io/logos/regular/mono-inverted/coldfuseLogo.svg" alt="coldfuse logo" class="logo center">
+                <a href="http://coldfuse.io" class="logo center"><img src="http://coldfuse.io/logos/regular/mono-inverted/coldfuseLogo.svg" alt="coldfuse logo"></a>
                 <div class="logoType">
                     roloca
                 </div>
@@ -130,7 +130,7 @@ func HomeRoHandler(w http.ResponseWriter, r *http.Request) {
                 <![endif]-->
 
                 <header class="header">
-                    <img src="http://coldfuse.io/logos/regular/mono-inverted/coldfuseLogo.svg" alt="coldfuse logo" class="logo center">
+                    <a href="http://coldfuse.io" class="logo center"><img src="http://coldfuse.io/logos/regular/mono-inverted/coldfuseLogo.svg" alt="coldfuse logo"></a>
                     <div class="logoType">
                         roloca
                     </div>
