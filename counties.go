@@ -5,7 +5,6 @@ package main
 // )
 
 type County struct {
-	Id        int       `json:"id"`
 	Auto      string    `json:"auto"`
 	Name      string    `json:"nume"`
 	Region    string    `json:"regiune"`
